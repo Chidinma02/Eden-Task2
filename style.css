@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    line-height: 1.5rem;
+  }
+  
+  :root {
+    --main-text: #0f241b;
+    --main-green: #14b757;
+    --light-green: #03a84e;
+    --extra-light-green: #e9fbf2;
+    --secondary-text: #4b6358;
+    --orange: #fff3df;
+    --yellow: #fab900;
+    --dark-yellow: #ffebb2;
+    --light-yellow: #fffdf5;
+    --pink: #fbe7f2;
+    --purple: #e5e9fc;
+    --gray: #cbd8d2;
+    --light-gray: #f9fbfa;
+    --extra-light-gray: #f0f4f2;
+    --stepper-gray: #e2e9e6;
+  }
+  
+  body {
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-text);
+  }
+  
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 95%;
+    max-width: 700px;
+    margin-block: 2rem;
+  }
+  
+  /* Start of Header */
+  .main-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .main-header__icon {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--extra-light-gray);
+    cursor: pointer;
+  }
+  
+  .main-header__icon i {
+    font-size: 1.25rem;
+  }
+  
+  /* End of Header */
+  
+  /* Start of Stepper */
+  .stepper {
+    display: flex;
+    align-items: center;
+    margin-block: 1.5rem;
+  }
+  
+  .stepper_point {
+    position: relative;
+  }
+  
+  .stepper-circle {
+    width: 1.78rem;
+    height: 1.78rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+  }
+  
+  .stepper-circle.light {
+    background-color: var(--extra-light-gray);
+    color: var(--main-text);
+  }
+  
+  .stepper-circle.active {
+    background-color: var(--main-green);
+    color: #fff;
+  }
+  
+  .stepper-text {
+    position: absolute;
+    bottom: -1.65rem;
+    white-space: nowrap;
+    color: #4b6358;
+  }
+  
+  .stepper-text.active {
+    color: var(--light-green);
+  }
+  
+  .stepper-line {
+    flex: auto;
+    height: 3px;
+    background-color: var(--stepper-gray);
+    position: relative;
+  }
+  
+  .stepper-line_filled-complete {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-green);
+  }
+  
+  .stepper-line_filled-partial {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background-color: var(--main-green);
+  }
+  /* End of Stepper */
+  
+  /* Start of Review Plan */
+  .review-plan__heading {
+    margin: 3rem 0 0.5rem 0;
+  }
+  
+  .review-plan__content {
+    color: var(--secondary-text);
+  }
+  /* End of Review Plan */
+  
+  /* Start of Plan Detail */
+  .plan-detail__header,
+  .end-date__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0 0.25rem 0;
+  }
+  
+  .plan-detail__header h3,
+  .end-date__header h3 {
+    color: var(--light-green);
+  }
+  
+  .plan-detail__break {
+    border-top: 1px solid var(--gray);
+    margin-block: 1rem;
+  }
+  
+  .plan-detail__card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .plan-detail__card {
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .plan-detail__left {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .plan-detail__left-img {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  .plan-detail__right {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .plan-detail__right i {
+    font-size: 0.75rem;
+    color: #8aa398;
+  }
+  
+  .plan-detail__card.green {
+    background-color: var(--extra-light-green);
+  }
+  
+  .plan-detail__card.purple {
+    background-color: var(--purple);
+  }
+  
+  .plan-detail__card.orange {
+    background-color: var(--orange);
+  }
+  .plan-detail__card.pink {
+    background-color: var(--pink);
+  }
+  /* End of Plan Detail */
+  
+  /* Start of Info Card */
+  .info-card {
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-block: 1rem;
+  }
+  
+  .info-card__icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 100%;
+  }
+  
+  .info-card__icon i {
+    font-size: 0.75rem;
+  }
+  
+  .info-card.yellow {
+    background-color: var(--dark-yellow);
+    border: 1px solid var(--yellow);
+  }
+  
+  .info-card.dark {
+    background-color: var(--light-gray);
+    border: 1px solid var(--main-text);
+  }
+  
+  .info-card.yellow > .info-card__icon {
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+  }
+  
+  .info-card.dark > .info-card__icon {
+    color: var(--main-text);
+    border: 1px solid var(--main-text);
+  }
+  /*End of Info Card */
+  
+  /* Start of Discount Code */
+  .discount-code__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-block: 1.25rem;
+  }
+  
+  .discount-code__code h3 {
+    color: var(--secondary-text);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-green);
+  }
+  
+  .discount-code__code p {
+    color: var(--light-green);
+    margin-top: 0.25px;
+  }
+  
+  .discount-code__remove-btn {
+    background-color: transparent;
+    border: 1px solid var(--stepper-gray);
+    border-radius: 1.5rem;
+    padding: 0.25rem 0.45rem;
+  }
+  
+  .discount-count__data {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .discount-count__data.top {
+    align-items: start;
+  }
+  
+  .discount-count__data p {
+    text-align: right;
+    max-width: 50%;
+    margin-left: auto;
+  }
+  
+  .discount-count__data p.green {
+    color: var(--light-green);
+  }
+  /* End of Discount Code */
+  
+  /* Start of Laundry Button */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn__view-laundry {
+    width: 100%;
+    max-width: 400px;
+    margin: 1.5rem auto;
+    background-color: var(--light-green);
+    color: #fff;
+    padding: 0.65rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .btn__view-laundry:hover,
+  .btn__view-laundry:active {
+    opacity: 0.65;
+  }
+  
+  .btn__view-laundry:active {
+    transform: scale(1.05);
+  }
+  
+  .footer__cta {
+    margin-block: 0.75rem;
+    color: var(--main-text);
+  }
+  
+  .footer__cta a {
+    color: var(--light-green);
+  }
+  /* End of Laundry Button */
+
+  .text-lg {
+    font-size: 1rem;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .text-xs {
+    font-size: 0.75rem;
+  }
+  
+  .font-sans {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .font-pt-serif {
+    font-family: "PT Sans", sans-serif;
+  }
+  
+  .font-semibold {
+    font-weight: 500;
+  }
+  
+.gg{
+    color:red;
+}
+
+/* Example CSS */
+
+
+.class-for-review{
+    font-family: "Cerebri Sans Regular";
+    color: #0F241B;
+
+}
+.class-for-icon{
+    background-color:  #F0F4F2;
+    width:50px;
+    radius:20px;
+
+}
+.im{
+    text-align:center;
+
+}
+.col-circle{
+    background-color :#14B757;
+    width: 28.44px;
+    height: 28.44px;
+   border-radius:30px;
+   display: flex;
+   justify-content: center; /* Horizontally center-align the content */
+   align-items: center;
+}
+.col-grey{
+    background-color :white;
+    border:1px solid #E2E9E6 ;
+    width: 28.44px;
+    height: 28.44px;
+   border-radius:30px;
+   display: flex;
+   justify-content: center; /* Horizontally center-align the content */
+   align-items: center;
+}
+.ic{
+text-align: center;
+color:white;
+}
+.fourth-con{
+    display: flex;
+    justify-content: end; /* Horizontally center-align the content */
+    align-items: end;
+}
+.second-con{
+    display: flex;
+    justify-content: center; /* Horizontally center-align the content */
+    align-items: center;
+}
+.third-con{
+    display: flex;
+    justify-content: center; /* Horizontally center-align the content */
+    align-items: center;
+}

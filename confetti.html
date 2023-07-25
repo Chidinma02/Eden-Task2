@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <link rel="stylesheet" type="text/css" href="./style.css" /> 
+    <script src="https://kit.fontawesome.com/a934b30340.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a934b30340.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a934b30340.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="content">
+                <div class="image-container">
+                    <img src="./images/image 5.png"> 
+                  </div>
+                  
+            
+             
+                <p class="p-eden ">Your Eden profile has been ! Completed,Aderinsola</p>
+                <!-- <p class="p-eden"></p> -->
+                <P class="class-for-review p-you">You're one step closer to starting your easy life with Eden.</P>
+                <!-- <p class="class-for-review p-you"></p> -->
+                
+            </div>
+          
+          </div>
+          <div class="div-for-button">
+            <button class="button ">Go Home</button>
+           </div>
+         <div class="confetti-container"> 
+            
+    
+                   
+                      
+               
+              </div> 
+    </div>
+    
+        
+  <script src="script.js"></script>
+    <style>
+        .div-for-button{
+            display: flex;
+  justify-content: center; 
+        }
+        .button {
+            /* margin-top:500px !important; */
+  background-color: #03A84E;
+  border-radius:32px ;
+  border:none;
+  color: white;
+  padding-left:110px;
+  padding-right:110px;
+  padding-top:15px;
+  padding-bottom:15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        .text-container {
+  white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+/* Media query for small screens (adjust the breakpoint as needed) */
+@media (max-width: 768px) {
+  .text-container {
+    white-space: normal; /* Allow the text to wrap on smaller screens */
+  }
+}
+        .image-container {
+  max-width: 100%; /* Ensure the container does not exceed its parent's width */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+.image-container img {
+  max-width: 100%; /* Make the image responsive by setting its maximum width to 100% of the container */
+  height: auto; 
+  height:64px;
+  width:64px;/* Automatically adjust the height to maintain aspect ratio */
+}
+
+        .p-you{
+            color:#1D352A ;
+        }
+        .p-eden{
+            font-weight: 700;
+            font-size:20px;
+            font-family: 'PT Sans', sans-serif;
+            font-family: 'PT Sans', sans-serif;
+
+        }
+       .container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 80vh;  
+  text-align:center;
+}  
+
+  body {
+  margin: 0;
+  overflow: hidden; /* Prevent page scrolling */
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+   /* Prevent confetti from interfering with clicks */
+}
+
+.confetti {
+  width: 6px;
+  height: 16px;
+  background-color: #8DDFF2; /* Red confetti */
+  position: absolute;
+  animation: confetti-fall 5s linear infinite;
+  transform-origin: center;
+  transform: rotateZ(45deg); 
+  border-radius: 3px; 
+  /* Rotate the rectangles to make them appear as diamonds */
+}
+
+.confetti:nth-child(2) {
+  background-color: #8398FF; /* Blue confetti */
+}
+
+.confetti:nth-child(3) {
+  background-color: #E870B0; /* Yellow confetti */
+}
+
+.confetti:nth-child(4) {
+  background-color: #6ECE8A; /* Yellow confetti */
+}
+.confetti:nth-child(5) {
+  background-color: #FFD34E; /* Yellow confetti */
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100%) rotateZ(45deg);
+  }
+  100% {
+    transform: translateY(100vh) rotateZ(45deg);
+  }
+}
+
+    </style>
+    <script>
+      const confettiContainer = document.querySelector('.confetti-container');
+
+function createConfetti() {
+  const confettiElement = document.createElement('div');
+  confettiElement.classList.add('confetti');
+
+  const colors = ['#8398FF', '#E870B0', '#6ECE8A',  '#FFD34E',  '#8DDFF2',]; // Add more colors if needed
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  confettiElement.style.backgroundColor = randomColor;
+
+  const randomX = Math.random() * 100;
+  const randomRotate = Math.random() * 360;
+  confettiElement.style.left = `${randomX}vw`;
+  confettiElement.style.transform = `rotateZ(${randomRotate}deg)`;
+
+  confettiContainer.appendChild(confettiElement);
+}
+
+// Generate confetti every 500ms (adjust this interval as needed)
+setInterval(createConfetti, 500);
+
+
+    </script>
+</body>
+</html>

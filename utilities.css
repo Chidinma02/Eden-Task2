@@ -1,0 +1,27 @@
+.text-lg {
+  font-size: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.font-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.font-pt-serif {
+  font-family: "PT Sans", sans-serif;
+}
+
+.font-semibold {
+  font-weight: 500;
+}
